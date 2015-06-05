@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GPS EIN-GV</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Mostrar Lista</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_activity_activity_maps">ActivityMaps</string>
+    <string name="title_activity_dialogo">Dialogo</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    style="@style/ActionBar.Solid.Example">
+
+
+    <TableRow
+        android:padding="5dp"
+        android:gravity="center"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MENU PRINCIPAL"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:id="@+id/textViewMenuPrincipal"
+            style="@style/Theme.Example" />
+    </TableRow>
+
+
+
+
+    <TableRow
+        android:layout_marginTop="100dip"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:id="@+id/buttonRegistrar"
+            android:textColor="#000" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Salir"
+            android:id="@+id/buttonSalir"
+            android:elegantTextHeight="false"
+            android:textSize="20sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exportar Base de Datos"
+            android:id="@+id/botonExportar"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
+    </TableRow>
+
+</TableLayout>

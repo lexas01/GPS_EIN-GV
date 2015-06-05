@@ -1,0 +1,45 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="registro.eingv.uabc.registroeingv.ActivityMaps">
+
+   <!--<item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+-->
+    <item android:id="@+id/menu_vista"
+        android:orderInCategory="100"
+        android:title="Vista"/>
+
+    <item android:id="@+id/menu_mover"
+        android:orderInCategory="100"
+        android:title="Mover"/>
+
+    <item android:id="@+id/menu_animar"
+        android:orderInCategory="100"
+        android:title="Animar"/>
+
+    <item android:id="@+id/menu_3d"
+        android:orderInCategory="100"
+        android:title="Mover 3D"/>
+
+   <!-- <item android:id="@+id/menu_posicion"
+        android:orderInCategory="100"
+        android:title="Posición"/>
+-->
+    <!--item android:id="@+id/menu_marcadores"
+        android:orderInCategory="100"
+        android:title="Marcadores"/>-->
+
+    <item android:id="@+id/menu_lineas"
+        android:orderInCategory="100"
+        android:title="Lineas"/>
+
+    <item android:id="@+id/menu_hablar"
+        android:orderInCategory="100"
+        android:title="Hablar"/>
+
+
+
+
+
+</menu>
