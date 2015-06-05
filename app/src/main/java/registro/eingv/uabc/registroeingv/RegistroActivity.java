@@ -236,31 +236,67 @@ public class RegistroActivity extends ActionBarActivity implements LocationListe
         puntos.add((float) location.getLongitude());
        // puntos.add((float) location.getAltitude());&& (puntos.get(1)<=(-115.068))
 
+
+
+        //Estacionamiento
         if((puntos.get(0)<=(32.30268)) && (puntos.get(1)<=(-115.07672)))
         {
-             speech("Estas en Laboratorio de ingenieria de software");
-             miNotificacion("Estas en Laboratorio de ingenieria de software ",Toast.LENGTH_LONG);
-
-
+            speech("Estas en el estacionamiento");
+            miNotificacion("Estas en el estacionamiento ",Toast.LENGTH_LONG);
         }
 
-        if (puntos.get(0)<=32.303 && (puntos.get(1)<=-115.076)){
-                speech("Estas en Laboratorio de ingenieria de software ");
+        ////lAB LIS/////
+        //Latitu 32.303064 Longitud -115.076603
+        if (puntos.get(0)<=32.303084 && (puntos.get(0)>=32.303044) && (puntos.get(1)<=-115.076623) &&(puntos.get(1)>=-115.076580)){
+            speech("Estas en Laboratorio de ingenieria de software ");
+            miNotificacion("Estas en Laboratorio de ingenieria de software ",Toast.LENGTH_LONG);
+        }
+        //Sala de Musica//// Latitud 32.302205, -115.075982
+        if (puntos.get(0)<=32.302225 && (puntos.get(0)>=32.302185) && (puntos.get(1)<=-115.076000) &&(puntos.get(1)>=-115.075960)){
+            speech("Estas en el Salon de Musica");
+            miNotificacion("Estas en el Salon de Musica",Toast.LENGTH_LONG);
+        }
+        //salon de Danza// //32.302272, -115.075939
+        if (puntos.get(0)<=32.302292 && (puntos.get(0)>=32.302262) && (puntos.get(1)<=-115.075950) &&(puntos.get(1)>=-115.075920)){
+            speech("Estas en El salon de Danza");
+            miNotificacion("Estas en El salon de Danza",Toast.LENGTH_LONG);
+        }
+        //Laboratorio B// 32.302295, -115.076434
+        if (puntos.get(0)<=32.302310 && (puntos.get(0)>=32.302275) && (puntos.get(1)<=-115.076454) &&(puntos.get(1)>=-115.076414)){
+            speech("Estas en el laboratorio B");
+            miNotificacion("Estas en el Laboratorio B ",Toast.LENGTH_LONG);
+        }
+        //Laboratorio de Ciencias Basicas 32.302785,-115.076254
+        if (puntos.get(0)<=32.302730 && (puntos.get(0)>=32.302265) && (puntos.get(1)<=-115.076274) &&(puntos.get(1)>=-115.076234)){
+            speech("Estas en Laboratorio de Ciencias Basicas");
+            miNotificacion("Estas en Laboratorio de Ciencias Basicas",Toast.LENGTH_LONG);
+        }
+        //Sala de Maestros 32.303010, -115.076273
+        if (puntos.get(0)<=32.302730 && (puntos.get(0)>=32.302265) && (puntos.get(1)<=-115.076274) &&(puntos.get(1)>=-115.076234)){
+            speech("Estas en Sala de Maestros");
+            miNotificacion("Estas en Sala de Maestros",Toast.LENGTH_LONG);
 
-                miNotificacion("Estas en Laboratorio de ingenieria de software ",Toast.LENGTH_LONG);
-            }
-
-        if (puntos.get(0)<=32.3028 && (puntos.get(1)<=-115.07665)){
-            speech("Estas en Cafeteria");
-
-            miNotificacion("Estas en Cafeteria ",Toast.LENGTH_LONG);
+        }   //Cafeteria 32.303146,-115.076789
+        if (puntos.get(0)<=32.303166 && (puntos.get(0)>=32.303146) && (puntos.get(1)<=-115.076805) &&(puntos.get(1)>=-115.076760)){
+            speech("Estas en la Cafeteria");
+            miNotificacion("Estas en la Cafeteria",Toast.LENGTH_LONG);
+        }
+        //CEDEM 32.302946,-115.076679
+        if (puntos.get(0)<=32.302966 && (puntos.get(0)>=32.302926) && (puntos.get(1)<=-115.076699) &&(puntos.get(1)>=-115.076660)){
+            speech("Estas en CEDEM");
+            miNotificacion("Estas en CEDEM",Toast.LENGTH_LONG);
+        }
+        //Estacionamiento 32.302790,-115.077101
+        if (puntos.get(0)<=32.302810 && (puntos.get(0)>=32.302770) && (puntos.get(1)<=-115.077120) &&(puntos.get(1)>=-115.077080)){
+            speech("Estas en el Estacionamiento");
+            miNotificacion("Estas en el Estacionamiento",Toast.LENGTH_LONG);
+        }
+        //Canchas deportivas 32.300680 -155.072767
+        if (puntos.get(0)<=32.300699 && (puntos.get(0)>=32.300660) && (puntos.get(1)<=-115.072789) &&(puntos.get(1)>=-115.072747)){
+            speech("Estas en las Canchas Deportivas");
+            miNotificacion("Estas las Canchas Deportivas",Toast.LENGTH_LONG);
         }
 
-        if (puntos.get(0)<=32.30290 && (puntos.get(1)<=-115.07647)){
-            speech("Estas en Edificio B ");
-
-            miNotificacion("Estas en Edificio B ",Toast.LENGTH_LONG);
-        }
 
 
     }
