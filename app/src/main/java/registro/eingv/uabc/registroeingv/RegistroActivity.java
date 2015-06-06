@@ -26,6 +26,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -238,64 +241,94 @@ public class RegistroActivity extends ActionBarActivity implements LocationListe
 
 
 
-        //Estacionamiento
-        if((puntos.get(0)<=(32.30268)) && (puntos.get(1)<=(-115.07672)))
-        {
-            speech("Estas en el estacionamiento");
-            miNotificacion("Estas en el estacionamiento ",Toast.LENGTH_LONG);
+        LatLng punto = new LatLng(puntos.get(0),puntos.get(1));
+        //   LatLng puntoA = new LatLng(32.303084,-115.076623);
+        // LatLng puntoB = new LatLng(32.303044,-115.076583);
+
+        // puntos.add((float) location.getAltitude());&& (puntos.get(1)<=(-115.068))
+
+
+
+        // LatLngBounds bounds = new LatLngBounds.Builder().include(puntoA).include(puntoB).build();
+
+
+
+
+        if (new LatLngBounds.Builder().include(new LatLng(32.303084,-115.076623)).include(new LatLng(32.303044,-115.076583)).build().contains(punto)){
+
+            miNotificacion("LIS", Toast.LENGTH_SHORT);
+
+
+
         }
 
-        ////lAB LIS/////
-        //Latitu 32.303064 Longitud -115.076603
-        if (puntos.get(0)<=32.303084 && (puntos.get(0)>=32.303044) && (puntos.get(1)<=-115.076623) &&(puntos.get(1)>=-115.076580)){
-            speech("Estas en Laboratorio de ingenieria de software ");
-            miNotificacion("Estas en Laboratorio de ingenieria de software ",Toast.LENGTH_LONG);
-        }
-        //Sala de Musica//// Latitud 32.302205, -115.075982
-        if (puntos.get(0)<=32.302225 && (puntos.get(0)>=32.302185) && (puntos.get(1)<=-115.076000) &&(puntos.get(1)>=-115.075960)){
-            speech("Estas en el Salon de Musica");
-            miNotificacion("Estas en el Salon de Musica",Toast.LENGTH_LONG);
-        }
-        //salon de Danza// //32.302272, -115.075939
-        if (puntos.get(0)<=32.302292 && (puntos.get(0)>=32.302262) && (puntos.get(1)<=-115.075950) &&(puntos.get(1)>=-115.075920)){
-            speech("Estas en El salon de Danza");
-            miNotificacion("Estas en El salon de Danza",Toast.LENGTH_LONG);
-        }
-        //Laboratorio B// 32.302295, -115.076434
-        if (puntos.get(0)<=32.302310 && (puntos.get(0)>=32.302275) && (puntos.get(1)<=-115.076454) &&(puntos.get(1)>=-115.076414)){
-            speech("Estas en el laboratorio B");
-            miNotificacion("Estas en el Laboratorio B ",Toast.LENGTH_LONG);
-        }
-        //Laboratorio de Ciencias Basicas 32.302785,-115.076254
-        if (puntos.get(0)<=32.302730 && (puntos.get(0)>=32.302265) && (puntos.get(1)<=-115.076274) &&(puntos.get(1)>=-115.076234)){
-            speech("Estas en Laboratorio de Ciencias Basicas");
-            miNotificacion("Estas en Laboratorio de Ciencias Basicas",Toast.LENGTH_LONG);
-        }
-        //Sala de Maestros 32.303010, -115.076273
-        if (puntos.get(0)<=32.302730 && (puntos.get(0)>=32.302265) && (puntos.get(1)<=-115.076274) &&(puntos.get(1)>=-115.076234)){
-            speech("Estas en Sala de Maestros");
-            miNotificacion("Estas en Sala de Maestros",Toast.LENGTH_LONG);
+        if (new LatLngBounds.Builder().include(new LatLng(32.303166,-115.076819)).include(new LatLng(32.303121, -115.076754)).build().contains(punto)){
 
-        }   //Cafeteria 32.303146,-115.076789
-        if (puntos.get(0)<=32.303166 && (puntos.get(0)>=32.303146) && (puntos.get(1)<=-115.076805) &&(puntos.get(1)>=-115.076760)){
-            speech("Estas en la Cafeteria");
-            miNotificacion("Estas en la Cafeteria",Toast.LENGTH_LONG);
+            miNotificacion("Cafeteria", Toast.LENGTH_SHORT);
+
+
+
         }
-        //CEDEM 32.302946,-115.076679
-        if (puntos.get(0)<=32.302966 && (puntos.get(0)>=32.302926) && (puntos.get(1)<=-115.076699) &&(puntos.get(1)>=-115.076660)){
-            speech("Estas en CEDEM");
-            miNotificacion("Estas en CEDEM",Toast.LENGTH_LONG);
+
+        if (new LatLngBounds.Builder().include(new LatLng(32.302805,-115.076274)).include(new LatLng(32.302766, -115.076223)).build().contains(punto)){
+
+            miNotificacion("Ciencias Basicas", Toast.LENGTH_SHORT);
+
+
+
         }
-        //Estacionamiento 32.302790,-115.077101
-        if (puntos.get(0)<=32.302810 && (puntos.get(0)>=32.302770) && (puntos.get(1)<=-115.077120) &&(puntos.get(1)>=-115.077080)){
-            speech("Estas en el Estacionamiento");
-            miNotificacion("Estas en el Estacionamiento",Toast.LENGTH_LONG);
+
+        if (new LatLngBounds.Builder().include(new LatLng(32.302974, -115.076722)).include(new LatLng(32.302927, -115.076660)).build().contains(punto)){
+
+            miNotificacion("CEDEM", Toast.LENGTH_SHORT);
+
+
+
         }
-        //Canchas deportivas 32.300680 -155.072767
-        if (puntos.get(0)<=32.300699 && (puntos.get(0)>=32.300660) && (puntos.get(1)<=-115.072789) &&(puntos.get(1)>=-115.072747)){
-            speech("Estas en las Canchas Deportivas");
-            miNotificacion("Estas las Canchas Deportivas",Toast.LENGTH_LONG);
+
+
+        if (new LatLngBounds.Builder().include(new LatLng(32.302326, -115.076469)).include(new LatLng(32.302273, -115.076372)).build().contains(punto)){
+
+            miNotificacion("Laboratorio B", Toast.LENGTH_SHORT);
+
+
+
         }
+
+
+        if (new LatLngBounds.Builder().include(new LatLng(32.302224, -115.076022)).include(new LatLng(32.302189, -115.075955)).build().contains(punto)){
+
+            miNotificacion("Salon de Musica", Toast.LENGTH_SHORT);
+
+
+
+        }
+
+        if (new LatLngBounds.Builder().include(new LatLng(32.302602, -115.076219)).include(new LatLng(32.302499, -115.076068)).build().contains(punto)){
+
+            miNotificacion("Estacionamiento de Maestros", Toast.LENGTH_SHORT);
+
+
+
+        }
+
+
+        if (new LatLngBounds.Builder().include(new LatLng(32.303062, -115.076299)).include(new LatLng(32.303013, -115.076194)).build().contains(punto)){
+
+            miNotificacion("Sala de Maestros", Toast.LENGTH_SHORT);
+
+
+
+        }
+
+        if (new LatLngBounds.Builder().include(new LatLng(32.302946, -115.077354)).include(new LatLng(32.302419, -115.076921)).build().contains(punto)){
+
+            miNotificacion("Estacionamiento", Toast.LENGTH_SHORT);
+
+
+
+        }
+
 
 
 

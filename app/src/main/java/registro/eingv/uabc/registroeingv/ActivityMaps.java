@@ -95,7 +95,7 @@ public class ActivityMaps extends android.support.v4.app.FragmentActivity implem
 
         mapa.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             public boolean onMarkerClick(Marker marker) {
-                     // engine.speak(marker.getSnippet().toString(), TextToSpeech.QUEUE_FLUSH,null);
+                     engine.speak(marker.getSnippet().toString(), TextToSpeech.QUEUE_FLUSH,null);
                 Toast.makeText(
                         ActivityMaps.this,
                         "Marcador pulsado:\n" +
