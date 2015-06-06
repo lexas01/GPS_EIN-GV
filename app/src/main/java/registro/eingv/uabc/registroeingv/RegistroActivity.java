@@ -233,62 +233,35 @@ public class RegistroActivity extends ActionBarActivity implements LocationListe
     @Override
     public void onLocationChanged(Location location) {
 
-        coordenadasText.setText("Latitud: [" + location.getLatitude() + "]\n Longitud: [" + location.getLongitude() +" ]");//+ "]\n Altitud: [" + location.getAltitude() + "]");
+        coordenadasText.setText("Latitud: [" + location.getLatitude() + "]\n Longitud: [" + location.getLongitude() +" ]");
         puntos=new ArrayList<>();
         puntos.add((float) location.getLatitude());
         puntos.add((float) location.getLongitude());
-       // puntos.add((float) location.getAltitude());&& (puntos.get(1)<=(-115.068))
-
-
 
         LatLng punto = new LatLng(puntos.get(0),puntos.get(1));
-        //   LatLng puntoA = new LatLng(32.303084,-115.076623);
-        // LatLng puntoB = new LatLng(32.303044,-115.076583);
-
-        // puntos.add((float) location.getAltitude());&& (puntos.get(1)<=(-115.068))
-
-
-
-        // LatLngBounds bounds = new LatLngBounds.Builder().include(puntoA).include(puntoB).build();
-
-
-
 
         if (new LatLngBounds.Builder().include(new LatLng(32.303084,-115.076623)).include(new LatLng(32.303044,-115.076583)).build().contains(punto)){
-
+            speech("Laboratorio de Ingenieria de Software");
             miNotificacion("LIS", Toast.LENGTH_SHORT);
-
-
-
         }
 
         if (new LatLngBounds.Builder().include(new LatLng(32.303166,-115.076819)).include(new LatLng(32.303121, -115.076754)).build().contains(punto)){
-
+            speech("Cafeteria");
             miNotificacion("Cafeteria", Toast.LENGTH_SHORT);
-
-
-
         }
 
         if (new LatLngBounds.Builder().include(new LatLng(32.302805,-115.076274)).include(new LatLng(32.302766, -115.076223)).build().contains(punto)){
-
+            speech("Ciencias Basicas");
             miNotificacion("Ciencias Basicas", Toast.LENGTH_SHORT);
-
-
-
         }
 
         if (new LatLngBounds.Builder().include(new LatLng(32.302974, -115.076722)).include(new LatLng(32.302927, -115.076660)).build().contains(punto)){
-
+            speech("CEDEM");
             miNotificacion("CEDEM", Toast.LENGTH_SHORT);
-
-
-
         }
 
-
         if (new LatLngBounds.Builder().include(new LatLng(32.302326, -115.076469)).include(new LatLng(32.302273, -115.076372)).build().contains(punto)){
-
+            speech("Laboratorio B");
             miNotificacion("Laboratorio B", Toast.LENGTH_SHORT);
 
 
@@ -297,7 +270,7 @@ public class RegistroActivity extends ActionBarActivity implements LocationListe
 
 
         if (new LatLngBounds.Builder().include(new LatLng(32.302224, -115.076022)).include(new LatLng(32.302189, -115.075955)).build().contains(punto)){
-
+            speech("Salon de Musica");
             miNotificacion("Salon de Musica", Toast.LENGTH_SHORT);
 
 
@@ -305,7 +278,7 @@ public class RegistroActivity extends ActionBarActivity implements LocationListe
         }
 
         if (new LatLngBounds.Builder().include(new LatLng(32.302602, -115.076219)).include(new LatLng(32.302499, -115.076068)).build().contains(punto)){
-
+            speech("Estacionamiento de Maestros");
             miNotificacion("Estacionamiento de Maestros", Toast.LENGTH_SHORT);
 
 
@@ -314,7 +287,7 @@ public class RegistroActivity extends ActionBarActivity implements LocationListe
 
 
         if (new LatLngBounds.Builder().include(new LatLng(32.303062, -115.076299)).include(new LatLng(32.303013, -115.076194)).build().contains(punto)){
-
+            speech("Sala de Maestros");
             miNotificacion("Sala de Maestros", Toast.LENGTH_SHORT);
 
 
@@ -322,7 +295,7 @@ public class RegistroActivity extends ActionBarActivity implements LocationListe
         }
 
         if (new LatLngBounds.Builder().include(new LatLng(32.302946, -115.077354)).include(new LatLng(32.302419, -115.076921)).build().contains(punto)){
-
+            speech("Estacionamiento");
             miNotificacion("Estacionamiento", Toast.LENGTH_SHORT);
 
 
@@ -396,12 +369,11 @@ public class RegistroActivity extends ActionBarActivity implements LocationListe
             Log.d("Speech", "Success!");
             Locale spanish = new Locale("es", "ES");
            engine.setLanguage(spanish);
-           //engine.setLanguage(Locale.ENGLISH);
+
         }
     }
     private void speech(String frase) {
-            //  engine.speak((dato.getDescripcion()).toString(),TextToSpeech.QUEUE_ADD,null); ////lee todos los datos
-            //  engine.speak(dato.getLugar().toString(), TextToSpeech.QUEUE_FLUSH,null);
+
             engine.speak(frase.toString(), TextToSpeech.QUEUE_FLUSH,null);
             engine.stop();
         }

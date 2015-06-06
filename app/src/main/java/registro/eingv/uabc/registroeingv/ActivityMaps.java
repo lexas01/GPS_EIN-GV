@@ -50,19 +50,6 @@ public class ActivityMaps extends android.support.v4.app.FragmentActivity implem
         amarcador();
         animm();
 
-/*        mapa.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            public void onMapClick(LatLng point) {
-                Projection proj = mapa.getProjection();
-                Point coord = proj.toScreenLocation(point);
-
-                Toast.makeText(
-                        ActivityMaps.this,
-                        "Click\n" +
-                                "Lat: " + point.latitude + "\n" +
-                                "Lng: " + point.longitude + "\n" +
-                                "X: " + coord.x + " - Y: " + coord.y, Toast.LENGTH_SHORT).show();
-            }
-        });*/
 
         mapa.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             public void onMapLongClick(LatLng point) {
@@ -79,19 +66,6 @@ public class ActivityMaps extends android.support.v4.app.FragmentActivity implem
             }
         });
 
-        /*mapa.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
-            public void onCameraChange(CameraPosition position) {
-                Toast.makeText(
-                        ActivityMaps.this,
-                        "Cambio Camara\n" +
-                                "Lat: " + position.target.latitude + "\n" +
-                                "Lng: " + position.target.longitude + "\n" +
-                                "Zoom: " + position.zoom + "\n" +
-                                "Orientacion: " + position.bearing + "\n" +
-                                "angulo: " + position.tilt,
-                        Toast.LENGTH_SHORT).show();
-            }
-        });*/
 
         mapa.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             public boolean onMarkerClick(Marker marker) {
